@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Kumar | Aspiring Data Analyst Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span>Sumit</span> Kumar
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- EDITABLE: Replace '#' with your actual Google Drive / Dropbox resume PDF link -->
+            <div class="nav-action">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline nav-resume-btn">
+                    <i class="fas fa-file-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Social Sidebar (Inspired by the upload UI "Best Skills On" sidebar layout) -->
+    <aside class="social-sidebar">
+        <div class="sidebar-text">Connect With Me</div>
+        <div class="sidebar-line"></div>
+        <div class="sidebar-icons">
+            <!-- EDITABLE: Replace URLs with your actual profile links -->
+            <a href="https://github.com/Su-stck" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="tooltip" data-tooltip="Open GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sumit-kumar-591a52291" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="tooltip" data-tooltip="Open LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/918409001903" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="tooltip" data-tooltip="Message on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:kumarsumitbgs2@gmail.com" aria-label="Email" class="tooltip" data-tooltip="Send Email"><i class="far fa-envelope"></i></a>
+        </div>
+    </aside>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="container hero-container">
+            
+            <!-- Hero Text Details (Left Side) -->
+            <div class="hero-content reveal">
+                <span class="badge-accent"><i class="fas fa-chart-line"></i> Available for Internships</span>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight-text">Sumit Kumar</span><br>
+                    Aspiring <span class="fancy-text">Data Analyst</span>
+                </h1>
+                <p class="hero-subtitle">B.Tech Final-Year Student | Uttarakhand Technical University</p>
+                <p class="hero-description">
+                    I transform raw, messy data into clean datasets, interactive dashboards, and actionable business insights. Specializing in Python, SQL, and Power BI.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-filled">View My Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+
+            <!-- Profile Photo & Interactive Upload (Right Side) -->
+            <div class="hero-visual reveal">
+                <!-- Decorative Chart Background Frame -->
+                <div class="visual-decor">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="decor-circle">
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(59, 130, 246, 0.15)" stroke-width="2" stroke-dasharray="8 4"/>
+                        <circle cx="100" cy="100" r="75" fill="none" stroke="rgba(139, 92, 246, 0.2)" stroke-width="1"/>
+                    </svg>
+                    <!-- Floating Accent Badge icons -->
+                    <div class="floating-badge badge-1 tooltip" data-tooltip="Python"><i class="fab fa-python"></i></div>
+                    <div class="floating-badge badge-2 tooltip" data-tooltip="SQL"><i class="fas fa-database"></i></div>
+                    <div class="floating-badge badge-3 tooltip" data-tooltip="Power BI"><i class="fas fa-chart-bar"></i></div>
+                    <div class="floating-badge badge-4 tooltip" data-tooltip="Excel"><i class="far fa-file-excel"></i></div>
+                </div>
+
+                <div class="profile-frame">
+                    <div class="profile-img-container" id="profile-container">
+                        <!-- SK Initials Placeholder by default -->
+                        <div class="profile-placeholder" id="profile-placeholder">
+                            <span class="placeholder-text">SK</span>
+                        </div>
+                        <img id="profile-preview" class="profile-img hide" src="" alt="Sumit Kumar">
+                    </div>
+                    
+                    <!-- File Upload Input Trigger -->
+                    <label for="image-upload" class="upload-trigger-btn" title="Upload profile photo">
+                        <i class="fas fa-camera"></i>
+                        <input type="file" id="image-upload" accept="image/*" aria-label="Upload profile image">
+                    </label>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about section bg-slate">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline"><i class="fas fa-user-tie"></i> Who I Am</span>
+                <h2 class="section-title">About <span class="fancy-text">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-grid reveal">
+                <div class="about-main-text">
+                    <p class="lead-text">
+                        "I am a B.Tech fourth-year student at Uttarakhand Technical University with a strong interest in data analytics, business intelligence, and problem solving. I enjoy cleaning data, identifying patterns, building dashboards, and presenting insights that support informed business decisions."
+                    </p>
+                    <p>
+                        My background in engineering has equipped me with a logical approach to structured databases and system workflows. I focus on translating complex data structures into visually engaging, understandable, and strategically viable summaries for recruiters and managers.
+                    </p>
+                </div>
+
+                <div class="about-cards-container">
+                    <!-- Education Card -->
+                    <div class="about-card card-glow">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-details">
+                            <h3>Education</h3>
+                            <p class="card-subtitle">Uttarakhand Technical University</p>
+                            <p class="card-info">B.Tech Engineering — Fourth Year Student</p>
+                        </div>
+                    </div>
+
+                    <!-- Career Objective Card -->
+                    <div class="about-card card-glow">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="card-details">
+                            <h3>Career Objective</h3>
+                            <p class="card-subtitle">Aspiring Data Analyst</p>
+                            <p class="card-info">Seeking an internship or entry-level Data Analyst opportunity where I can apply my analytical skills, learn from industry professionals, and contribute to data-driven decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline"><i class="fas fa-toolbox"></i> My Expertise</span>
+                <h2 class="section-title">Skills & <span class="fancy-text">Toolbox</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="skills-wrapper reveal">
+                <!-- Technical Skills -->
+                <div class="skills-category">
+                    <h3 class="category-title"><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+                    <div class="skills-grid">
+                        <!-- Python -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fab fa-python skill-logo py-color"></i>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <!-- SQL -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-database skill-logo sql-color"></i>
+                                <span class="skill-name">SQL</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <!-- MS Excel -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="far fa-file-excel skill-logo excel-color"></i>
+                                <span class="skill-name">Microsoft Excel</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <!-- Power BI -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-chart-bar skill-logo pbi-color"></i>
+                                <span class="skill-name">Power BI</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <!-- Tableau -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-chart-pie skill-logo tab-color"></i>
+                                <span class="skill-name">Tableau</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <!-- MySQL -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-server skill-logo mysql-color"></i>
+                                <span class="skill-name">MySQL</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <!-- Pandas -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-code skill-logo py-color"></i>
+                                <span class="skill-name">Pandas</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <!-- NumPy -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-calculator skill-logo num-color"></i>
+                                <span class="skill-name">NumPy</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <!-- Data Cleaning -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-broom skill-logo clean-color"></i>
+                                <span class="skill-name">Data Cleaning</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <!-- Data Visualization -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-chart-line skill-logo viz-color"></i>
+                                <span class="skill-name">Data Visualization</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <!-- Statistics -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-percentage skill-logo stat-color"></i>
+                                <span class="skill-name">Statistics</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <!-- Dashboard Development -->
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-desktop skill-logo dash-color"></i>
+                                <span class="skill-name">Dashboard Dev</span>
+                            </div>
+                            <div class="skill-progress-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skills-category">
+                    <h3 class="category-title"><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="skills-grid-soft">
+                        <div class="soft-skill-badge"><i class="fas fa-brain"></i> Analytical Thinking</div>
+                        <div class="soft-skill-badge"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+                        <div class="soft-skill-badge"><i class="fas fa-comments"></i> Communication</div>
+                        <div class="soft-skill-badge"><i class="fas fa-search"></i> Attention to Detail</div>
+                        <div class="soft-skill-badge"><i class="fas fa-user-friends"></i> Teamwork</div>
+                        <div class="soft-skill-badge"><i class="fas fa-user-clock"></i> Time Management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section bg-slate">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline"><i class="fas fa-folder-open"></i> Portfolio Highlights</span>
+                <h2 class="section-title">Selected <span class="fancy-text">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-grid reveal">
+                
+                <!-- Project A: Sales Performance Dashboard -->
+                <article class="project-card card-glow">
+                    <div class="project-visual">
+                        <!-- Interactive styled CSS chart simulation -->
+                        <div class="chart-sim-visual sales-bg">
+                            <div class="bar-chart-sim">
+                                <div class="bar-sim" style="height: 40%"></div>
+                                <div class="bar-sim" style="height: 60%"></div>
+                                <div class="bar-sim" style="height: 85%"></div>
+                                <div class="bar-sim" style="height: 50%"></div>
+                                <div class="bar-sim" style="height: 70%"></div>
+                            </div>
+                            <i class="fas fa-chart-bar visual-accent-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Sales Performance Dashboard</h3>
+                        <p class="project-description">
+                            An interactive dashboard that analyses revenue, product performance, regional sales trends, and key business metrics.
+                        </p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Excel</span>
+                            <span class="tool-tag">SQL</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- EDITABLE: Replace with your actual GitHub URL -->
+                            <a href="https://github.com/yourusername/project-name" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                <i class="fab fa-github"></i> GitHub Code
+                            </a>
+                            <!-- EDITABLE: Replace with your actual live project link -->
+                            <a href="https://your-project-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-filled btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Go Live
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project B: E-Commerce Customer Analysis -->
+                <article class="project-card card-glow">
+                    <div class="project-visual">
+                        <!-- Interactive styled CSS chart simulation -->
+                        <div class="chart-sim-visual customer-bg">
+                            <div class="pie-chart-sim">
+                                <div class="pie-slice slice-1"></div>
+                                <div class="pie-slice slice-2"></div>
+                            </div>
+                            <i class="fas fa-users-cog visual-accent-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Commerce Customer Analysis</h3>
+                        <p class="project-description">
+                            A data analysis project that identifies customer purchasing behaviour, top-selling products, and valuable customer segments.
+                        </p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Pandas</span>
+                            <span class="tool-tag">Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- EDITABLE: Replace with your actual GitHub URL -->
+                            <a href="https://github.com/yourusername/project-name" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                <i class="fab fa-github"></i> GitHub Code
+                            </a>
+                            <!-- EDITABLE: Replace with your actual live project link -->
+                            <a href="https://your-project-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-filled btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Go Live
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project C: HR Analytics Dashboard -->
+                <article class="project-card card-glow">
+                    <div class="project-visual">
+                        <!-- Interactive styled CSS chart simulation -->
+                        <div class="chart-sim-visual hr-bg">
+                            <div class="line-chart-sim">
+                                <svg viewBox="0 0 100 40" class="line-svg">
+                                    <path d="M0,35 Q20,10 40,25 T80,5 T100,15" fill="none" stroke="var(--blue-accent)" stroke-width="2"/>
+                                    <circle cx="40" cy="25" r="3" fill="var(--purple-accent)" />
+                                    <circle cx="80" cy="5" r="3" fill="var(--purple-accent)" />
+                                </svg>
+                            </div>
+                            <i class="fas fa-user-friends visual-accent-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">HR Analytics Dashboard</h3>
+                        <p class="project-description">
+                            A dashboard for analysing employee attrition, department performance, workforce demographics, and retention insights.
+                        </p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- EDITABLE: Replace with your actual GitHub URL -->
+                            <a href="https://github.com/yourusername/project-name" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                <i class="fab fa-github"></i> GitHub Code
+                            </a>
+                            <!-- EDITABLE: Replace with your actual live project link -->
+                            <a href="https://your-project-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-filled btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Go Live
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project D: SQL Data Exploration -->
+                <article class="project-card card-glow">
+                    <div class="project-visual">
+                        <!-- Interactive styled CSS chart simulation -->
+                        <div class="chart-sim-visual sql-bg">
+                            <div class="table-sim">
+                                <div class="table-row header-row"><span>ID</span><span>Val</span><span>Status</span></div>
+                                <div class="table-row"><span>01</span><span>$450</span><span>Paid</span></div>
+                                <div class="table-row"><span>02</span><span>$120</span><span>Refunded</span></div>
+                            </div>
+                            <i class="fas fa-terminal visual-accent-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">SQL Data Exploration</h3>
+                        <p class="project-description">
+                            A project using SQL to clean, explore, and analyse business data to find useful trends and answer key questions.
+                        </p>
+                        <div class="project-tools">
+                            <span class="tool-tag">SQL</span>
+                            <span class="tool-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- EDITABLE: Replace with your actual GitHub URL -->
+                            <a href="https://github.com/yourusername/project-name" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                <i class="fab fa-github"></i> GitHub Code
+                            </a>
+                            <!-- EDITABLE: Replace with your actual live project link -->
+                            <a href="https://your-project-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-filled btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Go Live
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline"><i class="fas fa-briefcase"></i> Timeline</span>
+                <h2 class="section-title">My <span class="fancy-text">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Vertical Timeline Layout -->
+            <div class="timeline reveal">
+                <div class="timeline-line"></div>
+
+                <!-- Default Timeline Entry -->
+                <div class="timeline-item left">
+                    <div class="timeline-badge"><i class="fas fa-search-dollar"></i></div>
+                    <div class="timeline-card card-glow">
+                        <span class="timeline-date">August 2026 - Present</span>
+                        <h3 class="timeline-role">Aspiring Data Analyst / Internship Seeker</h3>
+                        <h4 class="timeline-org">Self-Employed / Personal Upskilling</h4>
+                        <p class="timeline-desc">
+                            "Currently seeking internship and entry-level Data Analyst opportunities to apply my skills in data analysis, dashboard building, and business intelligence."
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li>Developing hands-on dashboards in Power BI tracking complex multi-table parameters.</li>
+                            <li>Writing optimized SQL queries (joins, window functions, CTEs) for data cleaning and manipulation.</li>
+                            <li>Building automated statistical pipelines in Python using Pandas, NumPy, and Seaborn.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- B.Tech Project Collaboration / Academic Experience (Optional - customizable) -->
+                <div class="timeline-item right">
+                    <div class="timeline-badge"><i class="fas fa-university"></i></div>
+                    <div class="timeline-card card-glow">
+                        <span class="timeline-date">2023 - 2026</span>
+                        <h3 class="timeline-role">B.Tech Final Year Student</h3>
+                        <h4 class="timeline-org">Uttarakhand Technical University</h4>
+                        <p class="timeline-desc">
+                            Acquired sound understanding of software engineering metrics, database administration systems, algorithms, and computational statistics.
+                        </p>
+                        <ul class="timeline-bullets">
+                            <li>Collaborated with peers to design student database systems using MySQL.</li>
+                            <li>Conducted academic project studies comparing multiple dashboard systems (Power BI vs Tableau).</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section bg-slate">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline"><i class="fas fa-award"></i> Verification</span>
+                <h2 class="section-title">My <span class="fancy-text">Certifications</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="certifications-grid reveal">
+                
+                <!-- Cert 1: Google Data Analytics -->
+                <div class="cert-card card-glow">
+                    <div class="cert-icon-container">
+                        <i class="fab fa-google google-icon"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Google Data Analytics</h3>
+                        <p class="cert-issuer">Google / Coursera</p>
+                        <p class="cert-date">Issued: 2026</p>
+                        <!-- EDITABLE: Replace '#' with your actual credential validation URL -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm cert-btn">
+                            View Credential <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Microsoft Power BI -->
+                <div class="cert-card card-glow">
+                    <div class="cert-icon-container">
+                        <i class="fas fa-chart-line pbi-icon"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Microsoft Power BI Certificate</h3>
+                        <p class="cert-issuer">Udemy / Coursera</p>
+                        <p class="cert-date">Issued: 2026</p>
+                        <!-- EDITABLE: Replace '#' with your actual credential validation URL -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm cert-btn">
+                            View Credential <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 3: SQL for Data Analysis -->
+                <div class="cert-card card-glow">
+                    <div class="cert-icon-container">
+                        <i class="fas fa-database sql-icon"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">SQL for Data Analysis</h3>
+                        <p class="cert-issuer">HackerRank / Udacity</p>
+                        <p class="cert-date">Issued: 2025</p>
+                        <!-- EDITABLE: Replace '#' with your actual credential validation URL -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm cert-btn">
+                            View Credential <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 4: Python for Data Science -->
+                <div class="cert-card card-glow">
+                    <div class="cert-icon-container">
+                        <i class="fab fa-python py-icon"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Python for Data Science</h3>
+                        <p class="cert-issuer">Cognitive Class / IBM</p>
+                        <p class="cert-date">Issued: 2025</p>
+                        <!-- EDITABLE: Replace '#' with your actual credential validation URL -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm cert-btn">
+                            View Credential <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 5: Advanced Excel / Data Visualisation -->
+                <div class="cert-card card-glow">
+                    <div class="cert-icon-container">
+                        <i class="far fa-file-excel excel-icon"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Advanced Excel / Data Visualisation</h3>
+                        <p class="cert-issuer">Coursera / LinkedIn Learning</p>
+                        <p class="cert-date">Issued: 2025</p>
+                        <!-- EDITABLE: Replace '#' with your actual credential validation URL -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm cert-btn">
+                            View Credential <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="contact-header reveal">
+                <h2 class="contact-section-title">Let’s Create Something Amazing!</h2>
+                <p class="contact-section-subtitle">
+                    Have a data project, internship opportunity, or collaboration in mind? Let’s connect and discuss how I can help turn data into meaningful insights.
+                </p>
+            </div>
+
+            <div class="contact-grid reveal">
+                <!-- Contact Details Left -->
+                <div class="contact-info-panel">
+                    <h3 class="column-title">Get in Touch</h3>
+                    <div class="contact-rows">
+                        
+                        <!-- Row 1: Email -->
+                        <div class="contact-row">
+                            <!-- EDITABLE: Replace your email below -->
+                            <a href="mailto:kumarsumitbgs2@gmail.com" aria-label="Send Email to Sumit Kumar" class="contact-icon-link tooltip" data-tooltip="Send Email">
+                                <div class="contact-icon-box">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                            </a>
+                            <div class="contact-row-content">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-val text-only">kumarsumitbgs2@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: WhatsApp -->
+                        <div class="contact-row">
+                            <!-- EDITABLE: Replace your whatsapp link below -->
+                            <a href="https://wa.me/918409001903" target="_blank" rel="noopener noreferrer" aria-label="Message Sumit Kumar on WhatsApp" class="contact-icon-link tooltip" data-tooltip="Chat on WhatsApp">
+                                <div class="contact-icon-box">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                            </a>
+                            <div class="contact-row-content">
+                                <span class="contact-label">WhatsApp</span>
+                                <span class="contact-val text-only">+91 84090 01903</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Phone -->
+                        <div class="contact-row">
+                            <!-- EDITABLE: Replace your phone link below -->
+                            <a href="tel:+918409001903" aria-label="Call Sumit Kumar" class="contact-icon-link tooltip" data-tooltip="Call Sumit">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                            </a>
+                            <div class="contact-row-content">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-val text-only">+91 84090 01903</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: LinkedIn -->
+                        <div class="contact-row">
+                            <!-- EDITABLE: Replace your LinkedIn URL below -->
+                            <a href="https://www.linkedin.com/in/sumit-kumar-591a52291" target="_blank" rel="noopener noreferrer" aria-label="Open Sumit Kumar's LinkedIn Profile" class="contact-icon-link tooltip" data-tooltip="Open LinkedIn">
+                                <div class="contact-icon-box">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                            </a>
+                            <div class="contact-row-content">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-val text-only">Sumit Kumar</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 5: GitHub -->
+                        <div class="contact-row">
+                            <!-- EDITABLE: Replace your GitHub URL below -->
+                            <a href="https://github.com/Su-stck" target="_blank" rel="noopener noreferrer" aria-label="Open Sumit Kumar's GitHub Profile" class="contact-icon-link tooltip" data-tooltip="Open GitHub">
+                                <div class="contact-icon-box">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </a>
+                            <div class="contact-row-content">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-val text-only">@Su-stck</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 6: Location -->
+                        <div class="contact-row">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Dehradun%2C%20India"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Open Dehradun location in Google Maps"
+                               class="contact-icon-link tooltip"
+                               data-tooltip="View location on Google Maps">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </a>
+                            <div class="contact-row-content">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-val text-only">Dehradun, India</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Contact Form Right -->
+                <div class="contact-form-panel">
+                    <h3 class="column-title">Send a Message</h3>
+                    <!-- Formspree endpoint: https://formspree.io/f/xaeyyqad — sends to kumarsumitbgs2@gmail.com -->
+                    <form id="contact-form" class="contact-form"
+                          action="https://formspree.io/f/xaeyyqad"
+                          method="POST"
+                          novalidate>
+
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                            <span class="error-msg" id="name-error">Name is required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+                            <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" name="subject" placeholder="Collaboration / Job Opportunity" required>
+                            <span class="error-msg" id="subject-error">Subject is required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                            <span class="error-msg" id="message-error">Message cannot be empty</span>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-filled btn-submit-new">
+                            <span class="btn-spinner" id="btn-spinner" aria-hidden="true"></span>
+                            <span id="btn-label">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notifications (Bottom-Right) -->
+    <div id="toast-container" class="toast-container">
+        <!-- Success Toast -->
+        <div id="success-toast" class="success-toast hide">
+            <div class="toast-content">
+                <div class="toast-icon toast-icon--success">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="toast-body">
+                    <h4 class="toast-title">Message Sent!</h4>
+                    <p class="toast-text">Thanks for reaching out. Sumit will get back to you soon.</p>
+                </div>
+                <button id="toast-close-btn" class="toast-close-btn" aria-label="Close notification">&times;</button>
+            </div>
+        </div>
+        <!-- Error Toast -->
+        <div id="error-toast" class="error-toast hide">
+            <div class="toast-content">
+                <div class="toast-icon toast-icon--error">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="toast-body">
+                    <h4 class="toast-title">Message Not Sent</h4>
+                    <p class="toast-text">Please try again or email Sumit directly at <a href="mailto:kumarsumitbgs2@gmail.com">kumarsumitbgs2@gmail.com</a>.</p>
+                </div>
+                <button id="error-toast-close-btn" class="toast-close-btn" aria-label="Close notification">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo"><span>Sumit</span> Kumar</a>
+                <p class="footer-tag">Aspiring Data Analyst | Turning data into actionable insights.</p>
+                <div class="footer-socials">
+                    <!-- EDITABLE: Replace URLs with your actual profile links -->
+                    <a href="https://github.com/Su-stck" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="tooltip" data-tooltip="Open GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sumit-kumar-591a52291" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="tooltip" data-tooltip="Open LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/918409001903" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Message" class="tooltip" data-tooltip="Message on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:kumarsumitbgs2@gmail.com" aria-label="Send Email" class="tooltip" data-tooltip="Send Email"><i class="far fa-envelope"></i></a>
+                    <a href="tel:+918409001903" aria-label="Call Phone" class="tooltip" data-tooltip="Call Sumit"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contacts">
+                <h4>Contact Details</h4>
+                <p><i class="far fa-envelope"></i> kumarsumitbgs2@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i> +91 84090 01903</p>
+                <p><i class="fas fa-map-marker-alt"></i> Dehradun, India</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sumit Kumar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
